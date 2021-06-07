@@ -1,0 +1,90 @@
+:root {
+    --gray: #d8d9db;
+    --orange: #df974c;
+    --btn-height: 96px;
+    --btn-width: 99px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.calculator {
+    display: flex;
+    flex-wrap: wrap;
+    height: calc(var(--btn-height) * 6.1);
+    width: calc(var(--btn-width) * 4.1);
+    justify-content: space-between;
+    margin: 4% auto auto 35%;
+    background-color: #000;
+}
+
+.solution-container {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.height {
+    height: var(--btn-height);
+}
+
+.clear-numbers-container {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+    width: 75%;
+}
+
+.operators-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    align-content: space-between;
+    flex-direction: column;
+    width: 25%;
+}
+
+.calc-btn, .op-btn {
+    border-radius: 0;
+    border:none;
+    width: var(--btn-width);
+    padding: 0;
+    font-size: 30px;
+    background-color: var(--gray);
+    color: black;
+}
+
+.clear-numbers-container .calc-btn:nth-child(1){
+    width: calc(var(--btn-width) * 2.0378);
+}
+
+.clear-numbers-container .calc-btn:last-child {
+    width: 100%;
+}
+
+/* #clear-btn {
+    width: calc(var(--btn-width) * 2.02);
+} */
+
+.solution {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    font-size: 50px;
+    background-color: #000;
+    color: white;
+    padding-right: 5%;
+    user-select: none;
+}
+
+.op-btn {
+    background-color: var(--orange);
+    color: white;
+}
+
+.calc-btn:hover, .op-btn:hover, #clear-btn:hover, #erase-btn:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
