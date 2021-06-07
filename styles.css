@@ -57,16 +57,12 @@
 }
 
 .clear-numbers-container .calc-btn:nth-child(1){
-    width: calc(var(--btn-width) * 2.0378);
+    width: calc(var(--btn-width) * 2.0378); /* declaring clear button width */
 }
 
 .clear-numbers-container .calc-btn:last-child {
-    width: 100%;
+    width: 100%; /* declaring zero button width */
 }
-
-/* #clear-btn {
-    width: calc(var(--btn-width) * 2.02);
-} */
 
 .solution {
     display: flex;
