@@ -10,7 +10,6 @@ let operator = '';
 let firstNumber = 0;
 let numbers = [];
 let total = 0;
-let numberAdded;
 
 function showNumber() {
     number = parseInt(numbers.join(''));
@@ -48,10 +47,12 @@ numbersPanel.addEventListener('click', function (event) {
 
 operators.addEventListener('click', function (event) {
     if (event.target.className === 'op-btn height') {
+        equalTo.disabled = false;
         operator = event.target.innerText;
-        eraser.disabled = true;
         firstNumber = number;
         numbers.splice(0);
+    } else {
+        equalTo.disabled = true;
     }
 });
 
@@ -74,11 +75,10 @@ equalTo.addEventListener('click', function () {
         numbers = Array.from(String(number), Number);
         showNumber();
     }
-    else {
+    else if (operator === '-') {
         total = firstNumber - number;
         number = total;
         numbers = Array.from(String(number), Number);
         showNumber();
     }
-    eraser.enabled = true;
 });
