@@ -69,7 +69,7 @@ equalTo.addEventListener('click', function () {
         numbers = Array.from(String(number), Number);
         showNumber();
     }
-    else if (operator === '/') {
+    else if (operator === '/' && number !== 0) {
         total = firstNumber / number;
         number = total;
         numbers = Array.from(String(number), Number);

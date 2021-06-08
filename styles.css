@@ -54,6 +54,7 @@
     font-size: 30px;
     background-color: var(--gray);
     color: black;
+    cursor: pointer;
 }
 
 .clear-numbers-container .calc-btn:nth-child(1){
@@ -73,6 +74,7 @@
     color: white;
     padding-right: 5%;
     user-select: none;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .op-btn {
@@ -80,7 +82,18 @@
     color: white;
 }
 
-.calc-btn:hover, .op-btn:hover, #clear-btn:hover, #erase-btn:hover {
-    opacity: 0.8;
-    cursor: pointer;
+.calc-btn:hover {
+    background-color: rgb(236, 236, 236);
+}
+
+.op-btn:hover {
+    background-color: #dfb07e;
+}
+
+.calc-btn:active {
+    background-color: rgb(199, 199, 199);
+}
+
+.op-btn:active {
+    background-color: #dd8d37;
 }
